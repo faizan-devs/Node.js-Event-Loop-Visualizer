@@ -4,10 +4,20 @@
   --color-gray-750: #2d3748;
 }
 
+/* Force a custom rotation utility */
+.rotate-360 {
+  transform: rotate(360deg);
+}
+
+/* Smooth height and opacity transitions */
+.log-container-transition {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(10px);
   }
 
   to {
@@ -17,5 +27,5 @@
 }
 
 .animate-fade-in {
-  animation: fade-in 0.3s ease-out;
+  animation: fade-in 0.3s ease-out forwards;
 }
